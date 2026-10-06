@@ -1,0 +1,491 @@
+/* =========================================
+   BASIC RESET
+========================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    font-size: 1rem;
+    background-color: #fffaf5;
+    color: #333;
+}
+
+
+/* =========================================
+   REUSABLE CONTAINER
+========================================= */
+
+.container {
+    width: 90%;
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   HEADER / NAVIGATION
+========================================= */
+
+.site-header {
+    background-color: #8b2e1e;
+    color: white;
+    padding: 1rem 0;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.logo {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    white-space: nowrap;
+}
+
+.navigation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.4rem 0.6rem;
+    border-radius: 0.3rem;
+}
+
+.navigation a:hover {
+    background-color: #a9442d;
+}
+
+
+/* =========================================
+   HERO / PROMOTIONAL BANNER
+========================================= */
+
+.hero {
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.55),
+        rgba(0, 0, 0, 0.55)
+    ),
+    #c45c35;
+
+    min-height: 50vh;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: white;
+    padding: 4rem 0;
+}
+
+.hero-content {
+    max-width: 50rem;
+}
+
+.hero h2 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    margin-bottom: 1.5rem;
+}
+
+.hero-button {
+    display: inline-block;
+
+    background-color: white;
+    color: #8b2e1e;
+
+    text-decoration: none;
+
+    padding: 0.75rem 1.5rem;
+
+    border-radius: 0.4rem;
+
+    font-weight: bold;
+
+    font-size: 1rem;
+}
+
+.hero-button:hover {
+    background-color: #f2e1d5;
+}
+
+
+/* =========================================
+   SPECIAL OFFER
+========================================= */
+
+.offer-section {
+    padding: 3rem 0;
+}
+
+.offer-banner {
+    background-color: #f4c95d;
+
+    text-align: center;
+
+    padding: 2rem;
+
+    border-radius: 0.8rem;
+
+    box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.1);
+}
+
+.offer-banner h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin-bottom: 0.5rem;
+}
+
+.offer-banner p {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.offer-banner span {
+    font-size: 0.95rem;
+}
+
+
+/* =========================================
+   MENU SECTION
+========================================= */
+
+.menu-section {
+    padding: 3rem 0 4rem;
+}
+
+.section-title {
+    text-align: center;
+
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+
+    margin-bottom: 0.5rem;
+
+    color: #8b2e1e;
+}
+
+.section-description {
+    text-align: center;
+
+    font-size: 1rem;
+
+    margin-bottom: 2rem;
+}
+
+
+/* =========================================
+   FLEXBOX MENU CONTAINER
+========================================= */
+
+.menu-container {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 1.5rem;
+}
+
+
+/* =========================================
+   FOOD CARDS
+========================================= */
+
+.food-card {
+    flex: 1 1 30%;
+
+    max-width: 32%;
+
+    min-width: 0;
+
+    background-color: white;
+
+    border-radius: 0.7rem;
+
+    overflow: hidden;
+
+    box-shadow: 0 0.2rem 0.7rem rgba(0, 0, 0, 0.12);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.food-image {
+    min-height: 10rem;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background-color: #f1d8ca;
+
+    font-size: clamp(3rem, 7vw, 5rem);
+}
+
+.food-content {
+    padding: 1.25rem;
+
+    display: flex;
+    flex-direction: column;
+
+    flex-grow: 1;
+}
+
+.food-content h3 {
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+
+    color: #8b2e1e;
+
+    margin-bottom: 0.5rem;
+}
+
+.food-content p {
+    font-size: 1rem;
+
+    margin-bottom: 1rem;
+
+    flex-grow: 1;
+}
+
+.price {
+    font-size: 1.1rem;
+
+    font-weight: bold;
+
+    color: #c45c35;
+}
+
+
+/* =========================================
+   OPENING HOURS
+========================================= */
+
+.info-section {
+    background-color: #f1e3d8;
+
+    padding: 3rem 0;
+
+    text-align: center;
+}
+
+.info-section h2 {
+    color: #8b2e1e;
+
+    font-size: clamp(1.7rem, 4vw, 2.3rem);
+
+    margin-bottom: 1rem;
+}
+
+.hours p {
+    margin-bottom: 0.4rem;
+
+    font-size: 1rem;
+}
+
+
+/* =========================================
+   CONTACT
+========================================= */
+
+.contact-section {
+    text-align: center;
+
+    padding: 3rem 0;
+}
+
+.contact-section h2 {
+    color: #8b2e1e;
+
+    font-size: clamp(1.7rem, 4vw, 2.3rem);
+
+    margin-bottom: 1rem;
+}
+
+.contact-section p {
+    margin-bottom: 0.5rem;
+
+    font-size: 1rem;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    background-color: #8b2e1e;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 1.2rem;
+
+    font-size: 0.9rem;
+}
+
+
+/* =========================================
+   TABLET MEDIA QUERY
+   48em ≈ 768px
+========================================= */
+
+@media (max-width: 48em) {
+
+    .nav-container {
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 1rem;
+    }
+
+    .navigation {
+        justify-content: center;
+
+        width: 100%;
+
+        gap: 0.5rem;
+    }
+
+    .navigation a {
+        font-size: 0.95rem;
+    }
+
+    .hero {
+        min-height: 45vh;
+
+        padding: 3rem 0;
+    }
+
+    .food-card {
+        flex: 1 1 45%;
+
+        max-width: 47%;
+    }
+
+    .offer-section,
+    .menu-section,
+    .info-section,
+    .contact-section {
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+}
+
+
+/* =========================================
+   MOBILE MEDIA QUERY
+   30em ≈ 480px
+========================================= */
+
+@media (max-width: 30em) {
+
+    .container {
+        width: 92%;
+    }
+
+    .site-header {
+        padding: 0.8rem 0;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .navigation {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        width: 100%;
+
+        gap: 0.25rem;
+    }
+
+    .navigation a {
+        text-align: center;
+
+        width: 100%;
+
+        padding: 0.5rem;
+    }
+
+    .hero {
+        min-height: 55vh;
+
+        padding: 2.5rem 0;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero-button {
+        width: 100%;
+
+        max-width: 18rem;
+    }
+
+    .offer-banner {
+        padding: 1.5rem 1rem;
+    }
+
+    .offer-banner p {
+        font-size: 1rem;
+    }
+
+    .menu-container {
+        gap: 1rem;
+    }
+
+    .food-card {
+        flex: 1 1 100%;
+
+        max-width: 100%;
+    }
+
+    .food-image {
+        min-height: 8rem;
+
+        font-size: 3.5rem;
+    }
+
+    .food-content {
+        padding: 1rem;
+    }
+
+    .food-content p {
+        font-size: 0.95rem;
+    }
+
+    .footer {
+        font-size: 0.8rem;
+    }
+}
